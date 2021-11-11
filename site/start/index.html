@@ -688,7 +688,7 @@
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
 <p>To install Lite, there is really only one way. You will have to contact frames#4888 for permission to use the framwork.</p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
-<p>Once you get the model, Import the model to your roblox game through the <code>toolbox</code>. No move both the main file <code>Lite</code> and the folder <code>LiteServices</code> to <code>ReplicatedStorage</code></p>
+<p>Once you get the model, Import the model to your Roblox game through the <code>toolbox</code>. Now move both the main file <code>Lite</code> and the folder <code>LiteServices</code> to <code>ReplicatedStorage</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>I'd like to mention that the folder <code>LiteServices</code> is required to remain at <code>ReplicatedStorage</code> however the main module <code>Lite</code> isn't required to.</p>
@@ -706,7 +706,7 @@
 <span class="n">Lite</span><span class="p">:</span><span class="n">Start</span><span class="p">()</span> <span class="c1">--&gt; You can also use Lite.Start()</span>
 </code></pre></div>
 <h3 id="client">Client<a class="headerlink" href="#client" title="Permanent link">#</a></h3>
-<p>Again simply create a <code>LocalScript</code> in you client-side most commenly made in <code>StarterPlayerScripts</code>.This may not work if you have placed your copy of Lite somewhere other than <code>ReplicatedStorage</code>.
+<p>Again simply create a <code>LocalScript</code> in your client-side, most commenly made in <code>StarterPlayerScripts</code>. This may not work if you have placed your copy of Lite somewhere other than <code>ReplicatedStorage</code>.
 <div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
 <span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">.</span><span class="n">Lite</span><span class="p">)</span>
 </code></pre></div></p>

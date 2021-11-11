@@ -11,7 +11,7 @@ Lite.Gate.New("ExampleGate")
 
 ## Wait for Gate
 !!! note 
-    Wait is used for a single time, it's not used to recieve data constantly.
+    Wait is used for a single time, it's not used to receive  data constantly.
 
 #### Client 
 ```lua
