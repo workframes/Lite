@@ -1,0 +1,32 @@
+site_name: Lite
+site_description: Lite framework documentation
+site_author: workframes
+repo_url: https://github.com/workframes/Lite
+repo_name: Lite
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.sections
+
+nav:
+  - Home: index.md
+  - Getting Started: start.md
+  - Enviroment:
+    - Services: env/services.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: false
+  - toc:
+      permalink: "#"
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed
+  - pymdownx.progressbar
+  - admonition
+
+plugins:
+  - search  
+
