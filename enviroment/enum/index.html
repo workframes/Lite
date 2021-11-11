@@ -13,7 +13,7 @@
         <meta name="author" content="workframes">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
@@ -64,6 +64,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#enum" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -75,8 +80,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Lite" class="md-header__button md-logo" aria-label="Lite" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -175,8 +179,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Lite" class="md-nav__button md-logo" aria-label="Lite" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     Lite
@@ -391,10 +394,57 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Enum
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Enum
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new" class="md-nav__link">
+    New
+  </a>
+  
+    <nav class="md-nav" aria-label="New">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -484,6 +534,53 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new" class="md-nav__link">
+    New
+  </a>
+  
+    <nav class="md-nav" aria-label="New">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -494,12 +591,32 @@
                   </a>
                 
                 
-                  <h1>Enum</h1>
-                
-                <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Documentation for <code>Enum</code> is coming soon!</p>
-</div>
+                <h1 id="enum">Enum<a class="headerlink" href="#enum" title="Permanent link">#</a></h1>
+<p>Enums are basically constants, just like the default enums however this just gives you the abbility to create your own.</p>
+<h2 id="new">New<a class="headerlink" href="#new" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Lite&quot;</span><span class="p">))</span>
+<span class="kd">local</span> <span class="n">Enum</span> <span class="o">=</span> <span class="n">Lite</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">Enum</span>
+
+<span class="kd">local</span> <span class="n">NewEnum</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">.</span><span class="n">New</span><span class="p">(</span><span class="s2">&quot;NewEnum&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;ChickenNuggets&quot;</span><span class="p">,</span> <span class="s2">&quot;Shrimp&quot;</span><span class="p">,</span> <span class="s2">&quot;Burger&quot;</span><span class="p">,})</span>
+</code></pre></div>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Lite&quot;</span><span class="p">))</span>
+<span class="kd">local</span> <span class="n">Enum</span> <span class="o">=</span> <span class="n">Lite</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">Enum</span>
+
+<span class="kd">local</span> <span class="n">NewEnum</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">.</span><span class="n">New</span><span class="p">(</span><span class="s2">&quot;NewEnum&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;ChickenNuggets&quot;</span><span class="p">,</span> <span class="s2">&quot;Shrimp&quot;</span><span class="p">,</span> <span class="s2">&quot;Burger&quot;</span><span class="p">,})</span>
+
+<span class="kd">local</span> <span class="n">MainDish</span> <span class="o">=</span> <span class="n">game</span><span class="p">.</span><span class="n">workspace</span><span class="p">.</span><span class="n">MainDish</span>
+
+<span class="kr">if</span><span class="p">(</span><span class="n">MainDish</span><span class="p">.</span><span class="n">Value</span> <span class="o">==</span> <span class="n">NewEnum</span><span class="p">.</span><span class="n">ChickenNuggets</span><span class="p">)</span><span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Main Dish is chicken nuggets&quot;</span><span class="p">)</span> <span class="c1">--&gt; Outputs: Main Dish is chicken nuggets</span>
+<span class="kr">elseif</span><span class="p">(</span><span class="n">MainDish</span><span class="p">.</span><span class="n">Value</span> <span class="o">==</span> <span class="n">NewEnum</span><span class="p">.</span><span class="n">Shrimp</span><span class="p">)</span><span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Main Dish is shrimp&quot;</span><span class="p">)</span> <span class="c1">--&gt; Outputs: Main Dish is shrimp</span>
+<span class="kr">elseif</span><span class="p">(</span><span class="n">MainDish</span><span class="p">.</span><span class="n">Value</span> <span class="o">==</span> <span class="n">NewEnum</span><span class="p">.</span><span class="n">Burger</span><span class="p">)</span><span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Main Dish is burger&quot;</span><span class="p">)</span> <span class="c1">--&gt; Outputs: Main Dish is burger</span>
+<span class="kr">end</span>
+</code></pre></div>
                 
               
               
