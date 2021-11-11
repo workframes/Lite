@@ -13,8 +13,21 @@ theme:
 nav:
   - Home: index.md
   - Getting Started: start.md
+  - Communication:
+    - Services: communication/services.md
+    - Gates: communication/gates.md
   - Enviroment:
-    - Services: env/services.md
+    - Instance: enviroment/instance.md
+    - Assert: enviroment/assert.md
+    - Promise: enviroment/promise.md
+    - Table: enviroment/table.md
+    - Enum: enviroment/enum.md
+    - Tween: enviroment/tween.md
+    - Http: enviroment/http.md
+    - Proxy: enviroment/proxy.md
+    - Webhook: enviroment/webhook.md
+    - Firebase: enviroment/firebase.md
+
 
 markdown_extensions:
   - pymdownx.highlight:
