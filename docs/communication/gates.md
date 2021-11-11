@@ -1,5 +1,5 @@
 # Gates
-Gates are a simply way of communicating to the client or the server.
+Gates are a simple way of communicating to the client or the server.
 
 ## Creating a Gate
 ```lua
@@ -11,7 +11,7 @@ Lite.Gate.New("ExampleGate")
 
 ## Wait for Gate
 !!! note 
-    Wait is used for one time, it's not used to recieve data constantly.
+    Wait is used for a single time, it's not used to recieve data constantly.
 
 #### Client 
 ```lua
