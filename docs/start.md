@@ -15,12 +15,12 @@ Once you get the model, Import the model to your Roblox game through the `toolbo
 Simply create a `Script` in `ServerScriptService` and then you will need to `require` your Lite module. This may not work if you have placed your copy of Lite somewhere other than `ReplicatedStorage`.
 ```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Lite = require(ReplicatedStorage.Lite)
+local Lite = require(ReplicatedStorage:WaitForChild("Lite"))
 ```
 #### Starting on Server
 ```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Lite = require(ReplicatedStorage.Lite)
+local Lite = require(ReplicatedStorage:WaitForChild("Lite"))
 
 Lite:Start() --> You can also use Lite.Start()
 ```
@@ -28,12 +28,12 @@ Lite:Start() --> You can also use Lite.Start()
 Again simply create a `LocalScript` in your client-side, most commenly made in `StarterPlayerScripts`. This may not work if you have placed your copy of Lite somewhere other than `ReplicatedStorage`.
 ```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Lite = require(ReplicatedStorage.Lite)
+local Lite = require(ReplicatedStorage:WaitForChild("Lite"))
 ```
 #### Starting on Client
 ```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Lite = require(ReplicatedStorage.Lite)
+local Lite = require(ReplicatedStorage:WaitForChild("Lite"))
 
 Lite:Start() --> You can also use Lite.Start()
 ```
