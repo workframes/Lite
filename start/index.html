@@ -697,22 +697,22 @@
 <h3 id="server">Server<a class="headerlink" href="#server" title="Permanent link">#</a></h3>
 <p>Simply create a <code>Script</code> in <code>ServerScriptService</code> and then you will need to <code>require</code> your Lite module. This may not work if you have placed your copy of Lite somewhere other than <code>ReplicatedStorage</code>.
 <div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
-<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">.</span><span class="n">Lite</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Lite&quot;</span><span class="p">))</span>
 </code></pre></div></p>
 <h4 id="starting-on-server">Starting on Server<a class="headerlink" href="#starting-on-server" title="Permanent link">#</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
-<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">.</span><span class="n">Lite</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Lite&quot;</span><span class="p">))</span>
 
 <span class="n">Lite</span><span class="p">:</span><span class="n">Start</span><span class="p">()</span> <span class="c1">--&gt; You can also use Lite.Start()</span>
 </code></pre></div>
 <h3 id="client">Client<a class="headerlink" href="#client" title="Permanent link">#</a></h3>
 <p>Again simply create a <code>LocalScript</code> in your client-side, most commenly made in <code>StarterPlayerScripts</code>. This may not work if you have placed your copy of Lite somewhere other than <code>ReplicatedStorage</code>.
 <div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
-<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">.</span><span class="n">Lite</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Lite&quot;</span><span class="p">))</span>
 </code></pre></div></p>
 <h4 id="starting-on-client">Starting on Client<a class="headerlink" href="#starting-on-client" title="Permanent link">#</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
-<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">.</span><span class="n">Lite</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Lite&quot;</span><span class="p">))</span>
 
 <span class="n">Lite</span><span class="p">:</span><span class="n">Start</span><span class="p">()</span> <span class="c1">--&gt; You can also use Lite.Start()</span>
 </code></pre></div>
