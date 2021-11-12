@@ -19,16 +19,16 @@ nav:
     - Services: communication/services.md
     - Gates: communication/gates.md
   - Enviroment:
-    - Instance: enviroment/instance.md
-    - Assert: enviroment/assert.md
-    - Promise: enviroment/promise.md
-    - Table: enviroment/table.md
-    - Enum: enviroment/enum.md
-    - Tween: enviroment/tween.md
-    - Http: enviroment/http.md
-    - Proxy: enviroment/proxy.md
-    - Webhook: enviroment/webhook.md
-    - Firebase: enviroment/firebase.md
+    - Instance: environment/instance.md
+    - Assert: environment/assert.md
+    - Promise: environment/promise.md
+    - Table: environment/table.md
+    - Enum: environment/enum.md
+    - Tween: environment/tween.md
+    - Http: environment/http.md
+    - Proxy: environment/proxy.md
+    - Webhook: environment/webhook.md
+    - Firebase: environment/firebase.md
 
 
 markdown_extensions:
