@@ -27,7 +27,7 @@ local ExampleService = Lite.Service.Require("ExampleService")
 ```
 
 ## Building Functions
-To implement functions to your service, you will be require to structure them like this.
+To implement functions to your service, you will be required to structure them like this.
 !!! note
     If you would like to create the function just for the `server-side` create the function inside the `Server` table in your structure or if you would like to create it just for the `client-side` create the function inside the `Client` table.
 ```lua

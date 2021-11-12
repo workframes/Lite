@@ -18,7 +18,7 @@
     
     
       
-        <title>Tween - Lite</title>
+        <title>Enum - Lite</title>
       
     
     
@@ -64,6 +64,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#enum" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -91,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tween
+              Enum
             
           </span>
         </div>
@@ -381,11 +386,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../enum/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Enum
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Enum
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new" class="md-nav__link">
+    New
+  </a>
+  
+    <nav class="md-nav" aria-label="New">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -395,19 +455,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../tween/" class="md-nav__link">
         Tween
       </a>
-      
     </li>
   
 
@@ -482,22 +534,89 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new" class="md-nav__link">
+    New
+  </a>
+  
+    <nav class="md-nav" aria-label="New">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/workframes/Lite/edit/master/docs/enviroment/tween.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/workframes/Lite/edit/master/docs/environment/enum.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Tween</h1>
-                
-                <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Documentation for <code>Tween</code> is coming soon!</p>
-</div>
+                <h1 id="enum">Enum<a class="headerlink" href="#enum" title="Permanent link">#</a></h1>
+<p>Enums are basically constants, just like the default enums however this just gives you the abbility to create your own.</p>
+<h2 id="new">New<a class="headerlink" href="#new" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Lite&quot;</span><span class="p">))</span>
+<span class="kd">local</span> <span class="n">Enum</span> <span class="o">=</span> <span class="n">Lite</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">Enum</span>
+
+<span class="kd">local</span> <span class="n">NewEnum</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">.</span><span class="n">New</span><span class="p">(</span><span class="s2">&quot;NewEnum&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;ChickenNuggets&quot;</span><span class="p">,</span> <span class="s2">&quot;Shrimp&quot;</span><span class="p">,</span> <span class="s2">&quot;Burger&quot;</span><span class="p">,})</span>
+</code></pre></div>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Lite&quot;</span><span class="p">))</span>
+<span class="kd">local</span> <span class="n">Enum</span> <span class="o">=</span> <span class="n">Lite</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">Enum</span>
+
+<span class="kd">local</span> <span class="n">NewEnum</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">.</span><span class="n">New</span><span class="p">(</span><span class="s2">&quot;NewEnum&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;ChickenNuggets&quot;</span><span class="p">,</span> <span class="s2">&quot;Shrimp&quot;</span><span class="p">,</span> <span class="s2">&quot;Burger&quot;</span><span class="p">,})</span>
+
+<span class="kd">local</span> <span class="n">MainDish</span> <span class="o">=</span> <span class="n">game</span><span class="p">.</span><span class="n">workspace</span><span class="p">.</span><span class="n">MainDish</span>
+
+<span class="kr">if</span><span class="p">(</span><span class="n">MainDish</span><span class="p">.</span><span class="n">Value</span> <span class="o">==</span> <span class="n">NewEnum</span><span class="p">.</span><span class="n">ChickenNuggets</span><span class="p">)</span><span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Main Dish is chicken nuggets&quot;</span><span class="p">)</span> <span class="c1">--&gt; Outputs: Main Dish is chicken nuggets</span>
+<span class="kr">elseif</span><span class="p">(</span><span class="n">MainDish</span><span class="p">.</span><span class="n">Value</span> <span class="o">==</span> <span class="n">NewEnum</span><span class="p">.</span><span class="n">Shrimp</span><span class="p">)</span><span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Main Dish is shrimp&quot;</span><span class="p">)</span> <span class="c1">--&gt; Outputs: Main Dish is shrimp</span>
+<span class="kr">elseif</span><span class="p">(</span><span class="n">MainDish</span><span class="p">.</span><span class="n">Value</span> <span class="o">==</span> <span class="n">NewEnum</span><span class="p">.</span><span class="n">Burger</span><span class="p">)</span><span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Main Dish is burger&quot;</span><span class="p">)</span> <span class="c1">--&gt; Outputs: Main Dish is burger</span>
+<span class="kr">end</span>
+</code></pre></div>
                 
               
               
@@ -517,7 +636,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../enum/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Enum" rel="prev">
+        <a href="../table/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Table" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -526,20 +645,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Enum
+              Table
             </div>
           </div>
         </a>
       
       
         
-        <a href="../http/" class="md-footer__link md-footer__link--next" aria-label="Next: Http" rel="next">
+        <a href="../tween/" class="md-footer__link md-footer__link--next" aria-label="Next: Tween" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Http
+              Tween
             </div>
           </div>
           <div class="md-footer__button md-icon">

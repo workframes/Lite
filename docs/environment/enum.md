@@ -1,5 +1,5 @@
 # Enum
-Enums are basically constants, just like the default enums however this just gives you the abbility to create your own.
+Enums are basically constants, just like the default enums however this just gives you the ability to create your own.
 
 ## New
 ```lua
