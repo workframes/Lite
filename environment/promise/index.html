@@ -18,7 +18,7 @@
     
     
       
-        <title>Http - Lite</title>
+        <title>Promise - Lite</title>
       
     
     
@@ -64,11 +64,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#http" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -96,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Http
+              Promise
             
           </span>
         </div>
@@ -358,11 +353,19 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../promise/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Promise
       </a>
+      
     </li>
   
 
@@ -414,21 +417,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../http/" class="md-nav__link">
         Http
       </a>
-      
     </li>
   
 
@@ -489,62 +482,22 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/workframes/Lite/edit/master/docs/enviroment/http.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/workframes/Lite/edit/master/docs/environment/promise.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="http">Http<a class="headerlink" href="#http" title="Permanent link">#</a></h1>
-<p>Http is a simple API wrapper made for <code>HttpService</code></p>
-<h1 id="request">Request<a class="headerlink" href="#request" title="Permanent link">#</a></h1>
-<p>This uses the function <code>RequestAsync</code> built into <code>HttpService</code>.</p>
-<div class="admonition warning">
+                  <h1>Promise</h1>
+                
+                <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Http is in it's beta versions right now, so expect a lot of bugs as sometimes it does break.</p>
+<p>Documentation for <code>Promise</code> is coming soon!</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
-<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Lite&quot;</span><span class="p">))</span>
-<span class="kd">local</span> <span class="n">Http</span> <span class="o">=</span> <span class="n">Lite</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">Http</span>
-
-<span class="kd">local</span> <span class="n">PayLoad</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="n">Url</span> <span class="o">=</span> <span class="s2">&quot;https://youtube.com&quot;</span><span class="p">,</span>
-    <span class="n">Method</span> <span class="o">=</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
-    <span class="n">Headers</span> <span class="o">=</span> <span class="p">{},</span>
-    <span class="n">Body</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="kd">local</span> <span class="n">Fetch</span> <span class="o">=</span> <span class="n">Http</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">PayLoad</span><span class="p">)</span>
-
-<span class="n">Fetch</span><span class="p">:</span><span class="n">Then</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="n">Response</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">Response</span><span class="p">)</span> <span class="c1">--&gt; Output: Response</span>
-<span class="kr">end</span><span class="p">):</span><span class="n">Catch</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="n">Error</span><span class="p">)</span>
-    <span class="nb">error</span><span class="p">(</span><span class="n">Error</span><span class="p">)</span> <span class="c1">--&gt; Output: Error</span>
-<span class="kr">end</span><span class="p">):</span><span class="n">Await</span><span class="p">()</span>
-</code></pre></div>
                 
               
               
@@ -564,7 +517,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../tween/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tween" rel="prev">
+        <a href="../assert/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Assert" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -573,20 +526,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Tween
+              Assert
             </div>
           </div>
         </a>
       
       
         
-        <a href="../proxy/" class="md-footer__link md-footer__link--next" aria-label="Next: Proxy" rel="next">
+        <a href="../table/" class="md-footer__link md-footer__link--next" aria-label="Next: Table" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Proxy
+              Table
             </div>
           </div>
           <div class="md-footer__button md-icon">

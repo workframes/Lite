@@ -18,7 +18,7 @@
     
     
       
-        <title>Firebase - Lite</title>
+        <title>Table - Lite</title>
       
     
     
@@ -64,6 +64,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#table" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -91,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Firebase
+              Table
             
           </span>
         </div>
@@ -367,11 +372,67 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../table/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Table
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Table
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    Filter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean" class="md-nav__link">
+    Clean
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone" class="md-nav__link">
+    Clone
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -451,19 +512,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../firebase/" class="md-nav__link">
         Firebase
       </a>
-      
     </li>
   
 
@@ -482,22 +535,103 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    Filter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean" class="md-nav__link">
+    Clean
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone" class="md-nav__link">
+    Clone
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/workframes/Lite/edit/master/docs/enviroment/firebase.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/workframes/Lite/edit/master/docs/environment/table.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Firebase</h1>
-                
-                <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Documentation for <code>Firebase</code> is coming soon!</p>
+                <h1 id="table">Table<a class="headerlink" href="#table" title="Permanent link">#</a></h1>
+<p>Table includes multiple functions such as to clone, filter, and clean a table that is passed through</p>
+<h2 id="filter">Filter<a class="headerlink" href="#filter" title="Permanent link">#</a></h2>
+<p>The first @parm of is the table you want to pass. The seconds parm includes the object you want to filter for.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The filter(Second @parm) can be either a <code>string</code> or a <code>table</code>, Example: <code>"a"</code> or <code>{"a", "b"}</code></p>
 </div>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Lite&quot;</span><span class="p">))</span>
+<span class="kd">local</span> <span class="n">Table</span> <span class="o">=</span> <span class="n">Lite</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">Table</span>
+
+<span class="kd">local</span> <span class="n">MyTable</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="s2">&quot;g&quot;</span><span class="p">}</span>
+
+<span class="n">Table</span><span class="p">.</span><span class="n">Filter</span><span class="p">(</span><span class="n">MyTable</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="c1">--&gt; Output: {&quot;a&quot;, &quot;a&quot;}</span>
+</code></pre></div>
+<h2 id="clean">Clean<a class="headerlink" href="#clean" title="Permanent link">#</a></h2>
+<p>The first @parm of is the table you want to pass. The seconds parm includes the object you want to filter out.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The filter(Second @parm) can be either a <code>string</code> or a <code>table</code>, Example: <code>"a"</code> or <code>{"a", "b"}</code></p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Lite&quot;</span><span class="p">))</span>
+<span class="kd">local</span> <span class="n">Table</span> <span class="o">=</span> <span class="n">Lite</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">Table</span>
+
+<span class="kd">local</span> <span class="n">MyTable</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="s2">&quot;g&quot;</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Table</span><span class="p">.</span><span class="n">Clean</span><span class="p">(</span><span class="n">MyTable</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">))</span> <span class="c1">--&gt; Output: {&quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;}</span>
+</code></pre></div>
+<h2 id="clone">Clone<a class="headerlink" href="#clone" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">Lite</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Lite&quot;</span><span class="p">))</span>
+<span class="kd">local</span> <span class="n">Table</span> <span class="o">=</span> <span class="n">Lite</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">Table</span>
+
+<span class="kd">local</span> <span class="n">MyTable</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="s2">&quot;g&quot;</span><span class="p">}</span>
+
+<span class="n">Table</span><span class="p">.</span><span class="n">Clone</span><span class="p">(</span><span class="n">MyTable</span><span class="p">)</span> <span class="c1">--&gt; Output: {&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;}</span>
+</code></pre></div>
                 
               
               
@@ -517,7 +651,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../webhook/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Webhook" rel="prev">
+        <a href="../promise/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Promise" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -526,11 +660,26 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Webhook
+              Promise
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../enum/" class="md-footer__link md-footer__link--next" aria-label="Next: Enum" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Enum
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
